@@ -13,7 +13,13 @@ class FilipExcept(Exception):
 
 
 def my_func():
-    raise FilipExcept
+    value_x = 0
+    value_y = 2
+    try:
+        result = value_y // value_x
+    except ZeroDivisionError as error:
+        raise FilipExcept
+    pass
 
 
 try:
